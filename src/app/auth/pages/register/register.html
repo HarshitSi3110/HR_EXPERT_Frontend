@@ -1,0 +1,29 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+    {{succMsg}}
+  <form
+    class="bg-white p-8 rounded-xl shadow-md w-full max-w-md space-y-4"
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+  >
+    <h2 class="text-2xl font-bold text-center">Create Account</h2>
+
+    <input class="input" placeholder="Name" formControlName="name" />
+    <input class="input" placeholder="Email" formControlName="email" />
+    <input class="input" placeholder="Mobile" formControlName="mobile" />
+    <input
+      class="input"
+      type="password"
+      placeholder="Password"
+      formControlName="password"
+    />
+
+    <p *ngIf="error" class="text-red-500 text-sm">{{ error }}</p>
+
+    <button
+      class="w-full bg-blue-600 text-white py-2 rounded-lg"
+      [disabled]="loading"
+    >
+      {{ loading ? 'Creating...' : 'Register' }}
+    </button>
+  </form>
+</div>
