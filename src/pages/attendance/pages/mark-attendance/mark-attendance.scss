@@ -1,0 +1,129 @@
+.page-container {
+  padding: 32px;
+}
+
+/* HERO */
+.attendance-hero {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border-radius: 16px;
+  padding: 28px 32px;
+  color: #fff;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 14px;
+    opacity: 0.9;
+  }
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* FORM */
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+/* TABLE */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #64748b;
+    padding: 14px;
+    text-align: left;
+  }
+
+  td {
+    padding: 14px;
+    border-top: 1px solid #f1f5f9;
+    font-size: 14px;
+  }
+
+  tr:hover {
+    background: #f8fafc;
+  }
+
+  .center {
+    text-align: center;
+  }
+}
+
+/* EMPLOYEE CELL */
+.emp-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name {
+    font-weight: 600;
+  }
+
+  .muted {
+    font-size: 12px;
+    color: #64748b;
+  }
+}
+
+/* ACTIONS */
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background: #1d4ed8;
+  }
+}
+
+/* EMPTY */
+.empty {
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+}

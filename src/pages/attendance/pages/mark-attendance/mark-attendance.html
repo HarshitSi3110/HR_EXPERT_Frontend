@@ -1,0 +1,128 @@
+<div class="page-container space-y-6">
+
+  <!-- HERO -->
+  <div class="attendance-hero">
+    <div>
+      <h1>Mark Attendance</h1>
+      <p>Select a client and mark employee attendance for today</p>
+    </div>
+  </div>
+
+  <!-- CLIENT SELECT -->
+<div class="space-y-2">
+  <label class="text-sm font-medium text-slate-600">
+    Select Client
+  </label>
+
+  <div class="relative">
+    <!-- ICON -->
+    <span
+      class="absolute left-4 top-1/2 -translate-y-1/2
+             text-slate-400 text-lg">
+      🏢
+    </span>
+
+    <!-- SELECT -->
+<select
+  [(ngModel)]="selectedClientId"
+  (change)="onClientChange()"
+  class="w-full appearance-none
+         bg-slate-50
+         border border-slate-300
+         rounded-xl
+         pl-12 pr-10 py-3
+         text-slate-800 text-sm
+         focus:outline-none
+         focus:ring-2 focus:ring-blue-500
+         focus:border-blue-500
+         hover:bg-white
+         transition">
+
+  <option value="">Select client</option>
+
+  <option
+    *ngFor="let client of clients"
+    [value]="client._id">
+    {{ client.clientName }}
+  </option>
+
+</select>
+
+
+    <!-- DROPDOWN ARROW -->
+    <span
+      class="absolute right-4 top-1/2 -translate-y-1/2
+             text-slate-400 pointer-events-none">
+      ⌄
+    </span>
+  </div>
+</div>
+
+
+  <!-- EMPLOYEE TABLE -->
+  <div class="card" *ngIf="employees.length">
+
+    <table class="attendance-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Employee</th>
+          <th>Designation</th>
+          <th class="center">Present</th>
+          <th class="center">Absent</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let emp of employees; let i = index">
+          <td>{{ i + 1 }}</td>
+
+          <td>
+            <div class="emp-cell">
+              <div class="avatar">{{ emp.name[0] }}</div>
+              <div>
+                <p class="name">{{ emp.name }}</p>
+                <span class="muted">{{ emp.employeeId }}</span>
+              </div>
+            </div>
+          </td>
+
+          <td>{{ emp.designation }}</td>
+
+          <!-- PRESENT -->
+          <td class="center">
+            <input
+              type="radio"
+              [name]="emp._id"
+              value="PRESENT"
+              (change)="attendance[emp._id] = 'PRESENT'"
+            />
+          </td>
+
+          <!-- ABSENT -->
+          <td class="center">
+            <input
+              type="radio"
+              [name]="emp._id"
+              value="ABSENT"
+              (change)="attendance[emp._id] = 'ABSENT'"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- SUBMIT -->
+    <div class="actions">
+      <button class="btn-primary" (click)="submitAttendance()">
+        Submit Attendance
+      </button>
+    </div>
+  </div>
+
+  <!-- EMPTY STATE -->
+  <div class="empty" *ngIf="selectedClientId && !employees.length">
+    No employees found for this client
+  </div>
+
+</div>
