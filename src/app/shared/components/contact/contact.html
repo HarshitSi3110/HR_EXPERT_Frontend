@@ -1,23 +1,43 @@
-<section class="hero">
-  <h1>Contact Us</h1>
-  <p>We’d love to hear from you</p>
-</section>
+<div class="page-wrapper">
 
-<section class="content">
-  <div class="card">
-    <h2>Get in Touch</h2>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you</p>
+  </section>
 
-    <p><strong>Email:</strong> support@quicksites.co</p>
-    <p><strong>Phone:</strong> +91 9XXXXXXXXX</p>
-    <p><strong>Location:</strong> India</p>
+  <!-- CONTENT -->
+  <section class="content">
 
-    <p class="note">
-      For business inquiries, feedback, or support,
-      feel free to reach out to us anytime.
-    </p>
-  </div>
+    <!-- CONTACT CARD -->
+    <div class="card">
+      <h2>Get in Touch</h2>
 
-  <div class="card highlight">
-    Designed & Developed by <strong>Quick Sites Team</strong>
-  </div>
-</section>
+      <div class="contact-info">
+        <p><strong>Email:</strong> support@quicksites.co</p>
+        <p><strong>Phone:</strong> +91 9XXXXXXXXX</p>
+        <p><strong>Location:</strong> India</p>
+      </div>
+
+      <p class="note">
+        For business inquiries, partnerships, or support,
+        feel free to reach out to us anytime. Our team is always happy to help.
+      </p>
+    </div>
+
+    <!-- FOOTER CARD -->
+    <div class="card highlight">
+      Designed & Developed by <strong>Quick Sites Team</strong>
+    </div>
+
+  </section>
+  <button
+  type="button"
+  (click)="goBack()"
+  class="flex items-center gap-2 px-4 py-2 rounded-lg
+         bg-slate-100 hover:bg-slate-200
+         text-slate-700 font-medium transition"
+>
+  ← Back
+</button>
+</div>

@@ -1,55 +1,55 @@
-/* HERO */
-.about-hero {
-  background: linear-gradient(180deg, #ffffff, #f1f5f9);
-  border-bottom: 1px solid #e2e8f0;
-  padding: 72px 20px;
+/* ===== PAGE WRAPPER ===== */
+.page-wrapper {
+  background: linear-gradient(180deg, #f1f5ff 0%, #f8fafc 60%, #ffffff 100%);
+  min-height: 100vh;
 }
 
-.hero-inner {
-  max-width: 900px;
-  margin: auto;
+/* ===== HERO ===== */
+.about-hero {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  padding: 72px 20px;
   text-align: center;
 }
 
 .about-hero h1 {
   font-size: 36px;
-  font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .about-hero p {
   font-size: 16px;
-  color: #64748b;
+  opacity: 0.9;
   max-width: 640px;
   margin: auto;
   line-height: 1.6;
 }
 
-/* CONTENT */
+/* ===== CONTENT ===== */
 .about-content {
   max-width: 900px;
-  margin: 64px auto;
+  margin: -48px auto 64px;
   padding: 0 20px;
   display: grid;
-  gap: 28px;
+  gap: 24px;
 }
 
-/* CARDS */
+/* ===== CARD ===== */
 .about-card {
   background: #ffffff;
   padding: 32px;
-  border-radius: 16px;
+  border-radius: 18px;
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.05),
-    0 4px 10px rgba(0, 0, 0, 0.03);
+    0 12px 30px rgba(15, 23, 42, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.05);
 }
 
 .about-card h2 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f172a;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .about-card p {
@@ -58,28 +58,21 @@
   line-height: 1.7;
 }
 
-/* HIGHLIGHT */
+/* ===== HIGHLIGHT ===== */
 .about-highlight {
-  background: #f8fafc;
-  border: 1px dashed #c7d2fe;
-  border-radius: 14px;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  border: 1px solid #c7d2fe;
+  border-radius: 16px;
   padding: 24px;
   text-align: center;
-}
-
-.about-highlight p {
   font-size: 14px;
   color: #475569;
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width: 640px) {
   .about-hero h1 {
     font-size: 28px;
-  }
-
-  .about-content {
-    margin: 48px auto;
   }
 
   .about-card {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './about.scss',
 })
 export class About {
-
+  constructor(private router: Router) {}
+  goBack(){
+    this.router.navigate(['/dashboard']);
+  }
 }

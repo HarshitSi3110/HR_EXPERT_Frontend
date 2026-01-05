@@ -5,61 +5,90 @@
 }
 
 /* ===== HERO ===== */
-.privacy-hero {
+.faq-hero {
   background: linear-gradient(135deg, #4f46e5, #6366f1);
   color: #ffffff;
   padding: 72px 20px;
   text-align: center;
 }
 
-.privacy-hero h1 {
+.faq-hero h1 {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-.privacy-hero p {
+.faq-hero p {
   font-size: 16px;
   opacity: 0.9;
-  max-width: 640px;
-  margin: auto;
-  line-height: 1.6;
 }
 
 /* ===== CONTENT ===== */
-.privacy-content {
+.faq-content {
   max-width: 900px;
   margin: -48px auto 64px;
   padding: 0 20px;
   display: grid;
-  gap: 24px;
+  gap: 16px;
 }
 
-/* ===== CARD ===== */
-.privacy-card {
+/* ===== FAQ ITEM ===== */
+.faq-item {
   background: #ffffff;
-  padding: 32px;
   border-radius: 18px;
   box-shadow:
     0 12px 30px rgba(15, 23, 42, 0.08),
     0 4px 12px rgba(15, 23, 42, 0.05);
+  overflow: hidden;
 }
 
-.privacy-card h2 {
-  font-size: 20px;
+/* ===== QUESTION ===== */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
   font-weight: 600;
   color: #0f172a;
-  margin-bottom: 14px;
+  cursor: pointer;
+  text-align: left;
 }
 
-.privacy-card p {
+.faq-question:hover {
+  background: #f8fafc;
+}
+
+.faq-question .icon {
+  font-size: 22px;
+  font-weight: 700;
+  color: #6366f1;
+}
+
+/* ===== ANSWER ===== */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer.open {
+  max-height: 300px;
+}
+
+.faq-answer p {
+  padding: 0 26px 22px;
   font-size: 15px;
   color: #475569;
   line-height: 1.7;
 }
 
-/* ===== HIGHLIGHT ===== */
-.privacy-highlight {
+/* ===== FOOTER NOTE ===== */
+.faq-highlight {
+  margin-top: 24px;
   background: linear-gradient(135deg, #eef2ff, #f8fafc);
   border: 1px solid #c7d2fe;
   border-radius: 16px;
@@ -71,11 +100,15 @@
 
 /* ===== MOBILE ===== */
 @media (max-width: 640px) {
-  .privacy-hero h1 {
+  .faq-hero h1 {
     font-size: 28px;
   }
 
-  .privacy-card {
-    padding: 24px;
+  .faq-question {
+    padding: 18px 20px;
+  }
+
+  .faq-answer p {
+    padding: 0 20px 18px;
   }
 }

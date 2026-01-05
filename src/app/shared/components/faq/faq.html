@@ -1,0 +1,53 @@
+<div class="page-wrapper">
+
+  <!-- HERO -->
+  <section class="faq-hero">
+    <h1>Frequently Asked Questions</h1>
+    <p>Find answers to common questions about HR Expert</p>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="faq-content">
+
+    <div
+      class="faq-item"
+      *ngFor="let faq of faqs; let i = index"
+    >
+      <!-- QUESTION -->
+      <button
+        class="faq-question"
+        (click)="toggle(i)"
+      >
+        <span>{{ faq.question }}</span>
+        <span class="icon">
+          {{ activeIndex === i ? '−' : '+' }}
+        </span>
+      </button>
+
+      <!-- ANSWER -->
+      <div
+        class="faq-answer"
+        [class.open]="activeIndex === i"
+      >
+        <p>{{ faq.answer }}</p>
+      </div>
+    </div>
+
+    <!-- FOOTER NOTE -->
+    <div class="faq-highlight">
+      Still have questions? Reach out to us anytime.
+      <br />
+      Designed & developed by <strong>Quick Sites Team</strong>
+    </div>
+
+  </section>
+  <button
+  type="button"
+  (click)="goBack()"
+  class="flex items-center gap-2 px-4 py-2 rounded-lg
+         bg-slate-100 hover:bg-slate-200
+         text-slate-700 font-medium transition"
+>
+  ← Back
+</button>
+</div>
