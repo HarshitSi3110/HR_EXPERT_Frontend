@@ -19,5 +19,6 @@ import { ClientsHome } from './pages/clients-home/clients-home';
 export const CLIENT_ROUTES: Routes = [
   { path: '', component: ClientsHome },
   { path: 'add-client', component: AddClient },
+  { path: 'client-home', component: ClientsHome },
   { path: 'edit-client/:id', component: EditClient },
 ];

@@ -1,5 +1,13 @@
 <div class="page-container space-y-8">
-
+  <button
+  type="button"
+  (click)="goBack()"
+  class="flex items-center gap-2 px-4 py-2 rounded-lg
+         bg-slate-100 hover:bg-slate-200
+         text-slate-700 font-medium transition"
+>
+  ← Back
+</button>
   <!-- HERO -->
   <section class="attendance-hero">
     <div>
@@ -7,6 +15,8 @@
       <p>Track daily attendance and monitor workforce availability</p>
     </div>
   </section>
+
+
 
   <!-- SUMMARY CARDS -->
   <div class="summary-grid">

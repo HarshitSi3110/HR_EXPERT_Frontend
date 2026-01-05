@@ -1,6 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ClientService } from '../../services/client.service';
 import { Header } from "../../../../app/shared/components/header/header";
 
@@ -15,7 +15,7 @@ clients: any[] = [];
   loading = false;
   error = '';
 
-  constructor(private clientService: ClientService) {}
+  constructor(private clientService: ClientService, private router: Router) {}
 
   ngOnInit() {
     this.loadClients();
@@ -35,6 +35,8 @@ clients: any[] = [];
       },
     });
   }
+
+  goBack(){this.router.navigate(['/dashboard']);}
 
   deleteClient(id: string) {
     if (!confirm('Are you sure you want to delete this client?')) return;

@@ -1,7 +1,15 @@
 <div class="page-container">
-
+  <button
+  type="button"
+  (click)="goBack()"
+  class="flex items-center gap-2 px-4 py-2 rounded-lg
+         bg-slate-100 hover:bg-slate-200
+         text-slate-700 font-medium transition"
+>
+  ← Back
+</button>
   <!-- HERO -->
-  <div class="employee-hero">
+  <div class="employee-hero" style="margin-top: 0.5rem;">
     <div class="hero-content">
       <div>
         <h1>Employee Management</h1>
@@ -13,11 +21,11 @@
 
       <div class="hero-stats">
         <div class="stat">
-          <h2>12</h2>
+          <h2>{{employees.length}}</h2>
           <span>Total Employees</span>
         </div>
         <div class="stat">
-          <h2>10</h2>
+          <h2>{{employees.length}}</h2>
           <span>Active</span>
         </div>
       </div>
@@ -80,7 +88,7 @@
           </td>
 
           <td class="actions">
-            <a [routerLink]="['/employees/edit', emp._id]">Edit</a>
+            <a [routerLink]="['/employees/edit-employee', emp._id]">Edit</a>
           </td>
         </tr>
 

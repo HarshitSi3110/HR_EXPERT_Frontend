@@ -1,6 +1,6 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { EmployeeService } from '../../services/employee.service';
 
 @Component({
@@ -16,10 +16,14 @@ export class EmployeeList {
   employees: any[] = [];
   loading = true;
 
-  constructor(private employeeService: EmployeeService) {}
+  constructor(private employeeService: EmployeeService, private router: Router) {}
 
   ngOnInit() {
     this.fetchEmployees();
+  }
+
+  goBack(){
+    this.router.navigate(['/dashboard']);
   }
 
   fetchEmployees() {

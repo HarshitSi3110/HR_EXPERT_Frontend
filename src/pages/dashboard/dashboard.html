@@ -14,7 +14,8 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
   <!-- About -->
-  <div
+  <a
+    routerLink="/about"
     class="group flex gap-4 p-5 rounded-2xl
            bg-gradient-to-br from-yellow-50 to-white
            border border-yellow-200/60
@@ -23,20 +24,26 @@
 
     <div
       class="w-11 h-11 rounded-xl
-             bg-yellow-100 text-yellow-600
+             bg-yellow-100
              flex items-center justify-center
-             text-lg group-hover:scale-110 transition">
-      ✉️
+             group-hover:scale-110 transition">
+
+      <img
+        src="https://unpkg.com/heroicons@2.1.1/24/outline/information-circle.svg"
+        class="w-6 h-6 text-yellow-600"
+        alt="About"
+      />
     </div>
 
     <div>
       <p class="text-sm font-semibold text-slate-800">About Us</p>
       <p class="text-xs text-slate-500">Know more about our platform</p>
     </div>
-  </div>
+  </a>
 
   <!-- Contact -->
-  <div
+  <a
+    routerLink="/contact"
     class="group flex gap-4 p-5 rounded-2xl
            bg-gradient-to-br from-orange-50 to-white
            border border-orange-200/60
@@ -45,20 +52,26 @@
 
     <div
       class="w-11 h-11 rounded-xl
-             bg-orange-100 text-orange-600
+             bg-orange-100
              flex items-center justify-center
-             text-lg group-hover:scale-110 transition">
-      🛡️
+             group-hover:scale-110 transition">
+
+      <img
+        src="https://unpkg.com/heroicons@2.1.1/24/outline/envelope.svg"
+        class="w-6 h-6 text-orange-600"
+        alt="Contact"
+      />
     </div>
 
     <div>
       <p class="text-sm font-semibold text-slate-800">Contact</p>
       <p class="text-xs text-slate-500">Email & phone support</p>
     </div>
-  </div>
+  </a>
 
   <!-- Privacy -->
-  <div
+  <a
+    routerLink="/privacy"
     class="group flex gap-4 p-5 rounded-2xl
            bg-gradient-to-br from-green-50 to-white
            border border-green-200/60
@@ -67,20 +80,26 @@
 
     <div
       class="w-11 h-11 rounded-xl
-             bg-green-100 text-green-600
+             bg-green-100
              flex items-center justify-center
-             text-lg group-hover:scale-110 transition">
-      🔒
+             group-hover:scale-110 transition">
+
+      <img
+        src="https://unpkg.com/heroicons@2.1.1/24/outline/lock-closed.svg"
+        class="w-6 h-6 text-green-600"
+        alt="Privacy"
+      />
     </div>
 
     <div>
       <p class="text-sm font-semibold text-slate-800">Privacy Policy</p>
       <p class="text-xs text-slate-500">Policies & data usage</p>
     </div>
-  </div>
+  </a>
 
   <!-- FAQs -->
-  <div
+  <a
+    routerLink="/faq"
     class="group flex gap-4 p-5 rounded-2xl
            bg-gradient-to-br from-blue-50 to-white
            border border-blue-200/60
@@ -89,19 +108,25 @@
 
     <div
       class="w-11 h-11 rounded-xl
-             bg-blue-100 text-blue-600
+             bg-blue-100
              flex items-center justify-center
-             text-lg group-hover:scale-110 transition">
-      ❓
+             group-hover:scale-110 transition">
+
+      <img
+        src="https://unpkg.com/heroicons@2.1.1/24/outline/question-mark-circle.svg"
+        class="w-6 h-6 text-blue-600"
+        alt="FAQ"
+      />
     </div>
 
     <div>
       <p class="text-sm font-semibold text-slate-800">FAQs</p>
       <p class="text-xs text-slate-500">Common questions answered</p>
     </div>
-  </div>
+  </a>
 
 </div>
+
 
 
       <!-- Quick Actions -->
@@ -109,267 +134,274 @@
   <h3 class="font-semibold mb-5 text-slate-800">Quick Actions</h3>
 
   <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div
-  class="group rounded-2xl
-         bg-white border border-slate-200
-         hover:border-blue-400
-         hover:shadow-2xl hover:-translate-y-2
-         transition-all duration-300
-         px-6 py-8 text-center cursor-pointer
-         relative overflow-hidden">
 
-  <!-- subtle top accent -->
-  <span
-    class="absolute top-0 left-0 w-full h-1
-           bg-gradient-to-r from-blue-500 to-indigo-500">
-  </span>
+    <!-- Add Client -->
+    <a
+      routerLink="/clients/add-client"
+      class="group rounded-2xl
+             bg-white border border-slate-200
+             hover:border-blue-400
+             hover:shadow-2xl hover:-translate-y-2
+             transition-all duration-300
+             px-6 py-8 text-center cursor-pointer
+             relative overflow-hidden">
 
-  <div
-    class="mx-auto w-16 h-16 rounded-2xl
-           bg-gradient-to-br from-blue-100 to-blue-200
-           text-blue-700
-           flex items-center justify-center
-           group-hover:scale-110 transition">
+      <span
+        class="absolute top-0 left-0 w-full h-1
+               bg-gradient-to-r from-blue-500 to-indigo-500">
+      </span>
 
-    <img
-    src="https://api.iconify.design/heroicons/home.svg"
-      class="w-8 h-8"
-      alt=""
-    />
-  </div>
+      <div
+        class="mx-auto w-16 h-16 rounded-2xl
+               bg-gradient-to-br from-blue-100 to-blue-200
+               flex items-center justify-center
+               group-hover:scale-110 transition">
 
-  <p class="mt-6 font-semibold text-sm text-slate-800">
-    Add Client
-  </p>
+        <img
+          src="https://api.iconify.design/heroicons/user-plus.svg"
+          class="w-8 h-8 text-blue-700"
+          alt="Add Client"
+        />
+      </div>
 
-  <p class="text-xs text-slate-500 mt-1">
-    Create new client profile
-  </p>
-</div>
+      <p class="mt-6 font-semibold text-sm text-slate-800">
+        Add Client
+      </p>
 
-    <!-- Card -->
+      <p class="text-xs text-slate-500 mt-1">
+        Create new client profile
+      </p>
+    </a>
 
+    <!-- Edit Client -->
+    <a
+      routerLink="/clients/client-home"
+      class="group rounded-2xl
+             bg-white border border-slate-200
+             hover:border-blue-400
+             hover:shadow-2xl hover:-translate-y-2
+             transition-all duration-300
+             px-6 py-8 text-center cursor-pointer
+             relative overflow-hidden">
 
+      <span
+        class="absolute top-0 left-0 w-full h-1
+               bg-gradient-to-r from-blue-500 to-indigo-500">
+      </span>
 
-<div
-  class="group rounded-2xl
-         bg-white border border-slate-200
-         hover:border-blue-400
-         hover:shadow-2xl hover:-translate-y-2
-         transition-all duration-300
-         px-6 py-8 text-center cursor-pointer
-         relative overflow-hidden">
+      <div
+        class="mx-auto w-16 h-16 rounded-2xl
+               bg-gradient-to-br from-blue-100 to-blue-200
+               flex items-center justify-center
+               group-hover:scale-110 transition">
 
-  <!-- subtle top accent -->
-  <span
-    class="absolute top-0 left-0 w-full h-1
-           bg-gradient-to-r from-blue-500 to-indigo-500">
-  </span>
+        <img
+          src="https://api.iconify.design/heroicons/users.svg"
+          class="w-8 h-8 text-blue-700"
+          alt="Edit Client"
+        />
+      </div>
 
-  <div
-    class="mx-auto w-16 h-16 rounded-2xl
-           bg-gradient-to-br from-blue-100 to-blue-200
-           text-blue-700
-           flex items-center justify-center
-           group-hover:scale-110 transition">
+      <p class="mt-6 font-semibold text-sm text-slate-800">
+        Edit Client
+      </p>
 
-    <img
-     src="https://api.iconify.design/heroicons/home.svg"
-      class="w-8 h-8"
-      alt=""
-    />
-  </div>
+      <p class="text-xs text-slate-500 mt-1">
+        View & manage client list
+      </p>
+    </a>
 
-  <p class="mt-6 font-semibold text-sm text-slate-800">
-    Edit Client
-  </p>
+    <!-- Add Employee -->
+    <a
+      routerLink="/employees/add-employee"
+      class="group rounded-2xl
+             bg-white border border-slate-200
+             hover:border-blue-400
+             hover:shadow-2xl hover:-translate-y-2
+             transition-all duration-300
+             px-6 py-8 text-center cursor-pointer
+             relative overflow-hidden">
 
-  <p class="text-xs text-slate-500 mt-1">
-    Create new client profile
-  </p>
-</div>
+      <span
+        class="absolute top-0 left-0 w-full h-1
+               bg-gradient-to-r from-blue-500 to-indigo-500">
+      </span>
 
-<div
-  class="group rounded-2xl
-         bg-white border border-slate-200
-         hover:border-blue-400
-         hover:shadow-2xl hover:-translate-y-2
-         transition-all duration-300
-         px-6 py-8 text-center cursor-pointer
-         relative overflow-hidden">
+      <div
+        class="mx-auto w-16 h-16 rounded-2xl
+               bg-gradient-to-br from-blue-100 to-blue-200
+               flex items-center justify-center
+               group-hover:scale-110 transition">
 
-  <!-- subtle top accent -->
-  <span
-    class="absolute top-0 left-0 w-full h-1
-           bg-gradient-to-r from-blue-500 to-indigo-500">
-  </span>
+        <img
+          src="https://api.iconify.design/heroicons/identification.svg"
+          class="w-8 h-8 text-blue-700"
+          alt="Add Employee"
+        />
+      </div>
 
-  <div
-    class="mx-auto w-16 h-16 rounded-2xl
-           bg-gradient-to-br from-blue-100 to-blue-200
-           text-blue-700
-           flex items-center justify-center
-           group-hover:scale-110 transition">
+      <p class="mt-6 font-semibold text-sm text-slate-800">
+        Add Employee
+      </p>
 
-    <img
-    src="https://api.iconify.design/heroicons/home.svg"
-      class="w-8 h-8"
-      alt=""
-    />
-  </div>
+      <p class="text-xs text-slate-500 mt-1">
+        Create new employee profile
+      </p>
+    </a>
 
-  <p class="mt-6 font-semibold text-sm text-slate-800">
-    Add Employee
-  </p>
+    <!-- Edit Employee -->
+    <a
+      routerLink="/employees/employee-list"
+      class="group rounded-2xl
+             bg-white border border-slate-200
+             hover:border-blue-400
+             hover:shadow-2xl hover:-translate-y-2
+             transition-all duration-300
+             px-6 py-8 text-center cursor-pointer
+             relative overflow-hidden">
 
-  <p class="text-xs text-slate-500 mt-1">
-    Create new Employee profilee
-  </p>
-</div>
+      <span
+        class="absolute top-0 left-0 w-full h-1
+               bg-gradient-to-r from-blue-500 to-indigo-500">
+      </span>
 
+      <div
+        class="mx-auto w-16 h-16 rounded-2xl
+               bg-gradient-to-br from-blue-100 to-blue-200
+               flex items-center justify-center
+               group-hover:scale-110 transition">
 
-<div
-  class="group rounded-2xl
-         bg-white border border-slate-200
-         hover:border-blue-400
-         hover:shadow-2xl hover:-translate-y-2
-         transition-all duration-300
-         px-6 py-8 text-center cursor-pointer
-         relative overflow-hidden">
+        <img
+          src="https://api.iconify.design/heroicons/pencil-square.svg"
+          class="w-8 h-8 text-blue-700"
+          alt="Edit Employee"
+        />
+      </div>
 
-  <!-- subtle top accent -->
-  <span
-    class="absolute top-0 left-0 w-full h-1
-           bg-gradient-to-r from-blue-500 to-indigo-500">
-  </span>
+      <p class="mt-6 font-semibold text-sm text-slate-800">
+        Edit Employee
+      </p>
 
-  <div
-    class="mx-auto w-16 h-16 rounded-2xl
-           bg-gradient-to-br from-blue-100 to-blue-200
-           text-blue-700
-           flex items-center justify-center
-           group-hover:scale-110 transition">
-
-    <img
-     src="https://api.iconify.design/heroicons/home.svg"
-      class="w-8 h-8"
-      alt=""
-    />
-  </div>
-
-  <p class="mt-6 font-semibold text-sm text-slate-800">
-    Edit Employee
-  </p>
-
-  <p class="text-xs text-slate-500 mt-1">
-    Create new client profile
-  </p>
-</div>
-
-
-
-
+      <p class="text-xs text-slate-500 mt-1">
+        Update employee details
+      </p>
+    </a>
 
   </div>
 </div>
+
 
       <!-- Connection Summary -->
-    <div>
+<div>
   <h3 class="font-semibold mb-4 text-slate-800">Client Summary</h3>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <!-- Postpaid -->
-<div
-  class="flex items-center justify-between
-         p-6 rounded-2xl
-         bg-gradient-to-br from-blue-50 via-white to-white
-         border border-blue-200/40
-         shadow-sm hover:shadow-lg hover:-translate-y-1
-         transition-all">
 
-  <div>
-    <p class="text-xs uppercase tracking-wide text-slate-500">
-      Employee Summary
-    </p>
+    <!-- TOTAL EMPLOYEES -->
+    <a
+      routerLink="/employees"
+      class="flex items-center justify-between
+             p-6 rounded-2xl
+             bg-gradient-to-br from-blue-50 via-white to-white
+             border border-blue-200/40
+             shadow-sm hover:shadow-lg hover:-translate-y-1
+             transition-all">
 
-    <p class="text-4xl font-extrabold text-blue-600 mt-2">
-      3
-    </p>
-  </div>
+      <div>
+        <p class="text-xs uppercase tracking-wide text-slate-500">
+          Total Employees
+        </p>
 
-  <div
-    class="w-14 h-14 rounded-2xl
-           bg-gradient-to-br from-blue-500 to-indigo-500
-           text-white text-2xl
-           flex items-center justify-center
-           shadow-md">
-    ⚡
+        <p class="text-4xl font-extrabold text-blue-600 mt-2">
+          3
+        </p>
+      </div>
+
+      <div
+        class="w-14 h-14 rounded-2xl
+               bg-gradient-to-br from-blue-500 to-indigo-500
+               flex items-center justify-center
+               shadow-md">
+
+        <img
+          src="https://api.iconify.design/heroicons/users.svg"
+          class="w-7 h-7 text-white"
+          alt="Employees"
+        />
+      </div>
+    </a>
+
+    <!-- TOTAL CLIENTS -->
+    <a
+      routerLink="/clients"
+      class="flex items-center justify-between
+             p-6 rounded-2xl
+             bg-gradient-to-br from-indigo-50 via-white to-white
+             border border-indigo-200/40
+             shadow-sm hover:shadow-lg hover:-translate-y-1
+             transition-all">
+
+      <div>
+        <p class="text-xs uppercase tracking-wide text-slate-500">
+          Total Clients
+        </p>
+
+        <p class="text-4xl font-extrabold text-indigo-600 mt-2">
+          3
+        </p>
+      </div>
+
+      <div
+        class="w-14 h-14 rounded-2xl
+               bg-gradient-to-br from-indigo-500 to-purple-500
+               flex items-center justify-center
+               shadow-md">
+
+        <img
+          src="https://api.iconify.design/heroicons/briefcase.svg"
+          class="w-7 h-7 text-white"
+          alt="Clients"
+        />
+      </div>
+    </a>
+
+    <!-- ATTENDANCE SUMMARY -->
+    <div
+      class="flex items-center justify-between
+             p-6 rounded-2xl
+             bg-gradient-to-br from-emerald-50 via-white to-white
+             border border-emerald-200/40
+             shadow-sm hover:shadow-lg hover:-translate-y-1
+             transition-all">
+
+      <a
+      routerLink="/attendance">
+        <p class="text-xs uppercase tracking-wide text-slate-500">
+          Attendance Summary
+        </p>
+
+        <p class="text-4xl font-extrabold text-emerald-600 mt-2">
+          3
+        </p>
+      </a>
+
+      <div
+        class="w-14 h-14 rounded-2xl
+               bg-gradient-to-br from-emerald-500 to-teal-500
+               flex items-center justify-center
+               shadow-md">
+
+        <img
+          src="https://api.iconify.design/heroicons/calendar-days.svg"
+          class="w-7 h-7 text-white"
+          alt="Attendance"
+        />
+      </div>
+    </div>
+
   </div>
 </div>
 
-
-    <!-- Prepaid -->
-<div
-  class="flex items-center justify-between
-         p-6 rounded-2xl
-         bg-gradient-to-br from-blue-50 via-white to-white
-         border border-blue-200/40
-         shadow-sm hover:shadow-lg hover:-translate-y-1
-         transition-all">
-
-  <div>
-    <p class="text-xs uppercase tracking-wide text-slate-500">
-      Employee Summary
-    </p>
-
-    <p class="text-4xl font-extrabold text-blue-600 mt-2">
-      3
-    </p>
-  </div>
-
-  <div
-    class="w-14 h-14 rounded-2xl
-           bg-gradient-to-br from-blue-500 to-indigo-500
-           text-white text-2xl
-           flex items-center justify-center
-           shadow-md">
-    ⚡
-  </div>
-</div>
-
-
-<div
-  class="flex items-center justify-between
-         p-6 rounded-2xl
-         bg-gradient-to-br from-blue-50 via-white to-white
-         border border-blue-200/40
-         shadow-sm hover:shadow-lg hover:-translate-y-1
-         transition-all">
-
-  <div>
-    <p class="text-xs uppercase tracking-wide text-slate-500">
-      Employee Summary
-    </p>
-
-    <p class="text-4xl font-extrabold text-blue-600 mt-2">
-      3
-    </p>
-  </div>
-
-  <div
-    class="w-14 h-14 rounded-2xl
-           bg-gradient-to-br from-blue-500 to-indigo-500
-           text-white text-2xl
-           flex items-center justify-center
-           shadow-md">
-    ⚡
-  </div>
-</div>
-
-
-
-  </div>
-</div>
 
 
     </div>

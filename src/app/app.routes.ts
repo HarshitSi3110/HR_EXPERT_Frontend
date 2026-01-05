@@ -4,6 +4,7 @@ import { Dashboard } from '../pages/dashboard/dashboard';
 import { About } from './shared/components/about/about';
 import { Contact } from './shared/components/contact/contact';
 import { Privacy } from './shared/components/privacy/privacy';
+import { Faq } from './shared/components/faq/faq';
 
 export const routes: Routes = [
 
@@ -44,6 +45,10 @@ export const routes: Routes = [
       { path: 'about', component: About },
       { path: 'contact', component: Contact },
       { path: 'privacy', component: Privacy},
+      {
+  path: 'faq',
+  component: Faq
+}
 
     ],
   },

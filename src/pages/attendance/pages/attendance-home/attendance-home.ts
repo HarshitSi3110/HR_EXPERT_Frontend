@@ -11,4 +11,10 @@ export class AttendanceHome {
 totalEmployees = 12;
   presentToday = 9;
   absentToday = 3;
+
+  constructor(private router: Router) {}
+
+  goBack(){
+    this.router.navigate(['/dashboard']);
+  }
 }
