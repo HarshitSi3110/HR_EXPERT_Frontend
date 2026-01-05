@@ -1,12 +1,39 @@
-
-
-<header class="w-full border-b bg-white">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-indigo-600">HR Expert</h1>
-
-    <nav class="flex gap-6 text-sm font-medium">
-      <a routerLink="/auth/login" class="hover:text-indigo-600">Login</a>
-      <a routerLink="/auth/register" class="hover:text-indigo-600">Register</a>
-    </nav>
+<header class="app-header" *ngIf="!isAuthPage">
+  <!-- Left: Brand -->
+  <div class="header-left">
+    <div class="logo">HR Expert</div>
   </div>
+
+  <!-- Center: Info Links (Desktop) -->
+
+
+  <!-- Right: User -->
+<!-- Right: User -->
+<!-- Right Section -->
+<div class="header-right">
+
+  <!-- Logged IN -->
+  <div *ngIf="user" class="user-menu" (click)="toggleMenu()">
+    <span class="user-name">{{ user?.name }}</span>
+    <span class="chevron">▾</span>
+
+    <div class="user-dropdown" *ngIf="isMenuOpen">
+      <button routerLink="/profile">View Profile</button>
+      <button class="danger" (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- Logged OUT -->
+  <a
+    *ngIf="!user"
+    routerLink="/auth/login"
+    class="login-btn"
+  >
+    Login
+  </a>
+
+</div>
+
+
+
 </header>

@@ -1,0 +1,83 @@
+<div class="employee-page" *ngIf="!loading">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Edit Employee</h1>
+      <p>Update employee information</p>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <div class="card" *ngIf="!submitted">
+    <form (ngSubmit)="submit()">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Name</label>
+          <input [(ngModel)]="formData.name" name="name" />
+        </div>
+
+        <div class="form-group">
+          <label>Employee ID</label>
+          <input [(ngModel)]="formData.employeeId" name="employeeId" disabled />
+        </div>
+
+        <div class="form-group">
+          <label>Designation</label>
+          <input [(ngModel)]="formData.designation" name="designation" />
+        </div>
+
+        <div class="form-group">
+          <label>Status</label>
+          <select [(ngModel)]="formData.status" name="status">
+            <option value="ACTIVE">Active</option>
+            <option value="INACTIVE">Inactive</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Select Client</label>
+          <select [(ngModel)]="formData.client" name="client">
+            <option value="">Select Client</option>
+            <option *ngFor="let c of clients" [value]="c._id">
+              {{ c.clientName }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Yearly CTC</label>
+          <input [(ngModel)]="formData.yearlyCtc" name="yearlyCtc" />
+        </div>
+
+        <div class="form-group full">
+          <label>Address</label>
+          <input [(ngModel)]="formData.address" name="address" />
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <button type="button" class="secondary-btn" (click)="back()">Cancel</button>
+        <button class="primary-btn">Update Employee</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- CONFIRMATION -->
+  <div class="confirmation" *ngIf="submitted">
+    <div class="check">✔</div>
+    <h2>Employee Updated</h2>
+    <p>Employee details updated successfully.</p>
+
+    <div class="actions">
+      <button class="primary-btn" routerLink="/employees">
+        Back to Employees
+      </button>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,96 @@
+<div class="page-container">
+
+  <!-- HERO -->
+  <div class="employee-hero">
+    <div class="hero-content">
+      <div>
+        <h1>Employee Management</h1>
+        <p>
+          Manage employees, assign them to clients, and keep employment
+          records up to date.
+        </p>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <h2>12</h2>
+          <span>Total Employees</span>
+        </div>
+        <div class="stat">
+          <h2>10</h2>
+          <span>Active</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="hero">
+    <div>
+      <h1>Employees</h1>
+      <p>Manage your workforce, roles, and employment details</p>
+    </div>
+
+    <button class="btn primary" routerLink="/employees/add-employee">
+      + Add Employee
+    </button>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-card">
+    <table class="modern-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Employee</th>
+          <th>Designation</th>
+          <th>Client</th>
+          <th>Phone</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let emp of employees; let i = index">
+          <td>{{ i + 1 }}</td>
+
+          <td>
+            <div class="employee-cell">
+              <div class="avatar">{{ emp.name[0] }}</div>
+              <div>
+                <strong>{{ emp.name }}</strong>
+                <div class="sub">{{ emp.employeeId }}</div>
+              </div>
+            </div>
+          </td>
+
+          <td>{{ emp.designation }}</td>
+          <td>{{ emp.client?.clientName || '-' }}</td>
+          <td>{{ emp.mobilePrimary }}</td>
+
+          <td>
+            <span
+              class="status"
+              [class.active]="emp.status === 'ACTIVE'"
+              [class.inactive]="emp.status === 'INACTIVE'"
+            >
+              {{ emp.status }}
+            </span>
+          </td>
+
+          <td class="actions">
+            <a [routerLink]="['/employees/edit', emp._id]">Edit</a>
+          </td>
+        </tr>
+
+        <tr *ngIf="employees.length === 0">
+          <td colspan="7" class="empty">
+            No employees found
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

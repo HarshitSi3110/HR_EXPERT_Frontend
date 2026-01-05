@@ -1,26 +1,131 @@
-<div class="min-h-screen flex items-center justify-center bg-gray-100">
-  <form
-    class="bg-white p-8 rounded-xl shadow-md w-full max-w-md space-y-4"
-    [formGroup]="form"
-    (ngSubmit)="submit()"
-  >
-    <h2 class="text-2xl font-bold text-center">Login</h2>
+<div class="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-white">
 
-    <input class="input" placeholder="Mobile" formControlName="mobile" />
-    <input
-      class="input"
-      type="password"
-      placeholder="Password"
-      formControlName="password"
-    />
-
-    <p *ngIf="error" class="text-red-500 text-sm">{{ error }}</p>
-
-    <button
-      class="w-full bg-blue-600 text-white py-2 rounded-lg"
-      [disabled]="loading"
+  <!-- LEFT: LOGIN FORM -->
+  <div class="flex items-center justify-center px-6 py-12">
+    <form
+      class="w-full max-w-md"
+      [formGroup]="form"
+      (ngSubmit)="submit()"
     >
-      {{ loading ? 'Logging in...' : 'Login' }}
-    </button>
-  </form>
+      <!-- Logo / Brand -->
+      <div class="mb-10 flex items-center gap-2">
+        <div class="h-8 w-8 rounded bg-purple-600"></div>
+        <span class="text-lg font-semibold text-slate-900">
+          HR Expert
+        </span>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="text-3xl font-bold text-slate-900">
+        Welcome back
+      </h1>
+      <p class="mt-2 text-sm text-slate-500">
+        Please enter your details
+      </p>
+
+      <!-- Mobile / Email -->
+      <div class="mt-8">
+        <label class="mb-2 block text-sm font-medium text-slate-700">
+          Mobile number
+        </label>
+        <input
+          formControlName="mobile"
+          placeholder="Enter your mobile number"
+          class="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm
+                 placeholder-slate-400
+                 focus:border-purple-600 focus:outline-none
+                 focus:ring-4 focus:ring-purple-100"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="mt-5">
+        <label class="mb-2 block text-sm font-medium text-slate-700">
+          Password
+        </label>
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="••••••••"
+          class="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm
+                 placeholder-slate-400
+                 focus:border-purple-600 focus:outline-none
+                 focus:ring-4 focus:ring-purple-100"
+        />
+      </div>
+
+      <!-- Remember + Forgot -->
+      <div class="mt-4 flex items-center justify-between text-sm">
+        <label class="flex items-center gap-2 text-slate-600">
+          <input
+            type="checkbox"
+            class="h-4 w-4 rounded border-slate-300 text-purple-600 focus:ring-purple-500"
+          />
+          Remember for 30 days
+        </label>
+
+        <a class="font-medium text-purple-600 hover:underline cursor-pointer">
+          Forgot password
+        </a>
+      </div>
+
+      <!-- Error -->
+      <p *ngIf="error" class="mt-4 text-sm text-red-600">
+        {{ error }}
+      </p>
+
+      <!-- Sign in -->
+      <button
+        class="mt-6 w-full rounded-lg bg-purple-600 py-3
+               text-sm font-semibold text-white
+               transition hover:bg-purple-700
+               disabled:opacity-60 disabled:cursor-not-allowed"
+        [disabled]="loading"
+      >
+        {{ loading ? 'Signing in...' : 'Sign in' }}
+      </button>
+
+      <!-- Divider -->
+      <div class="my-6 flex items-center gap-4">
+        <div class="h-px flex-1 bg-slate-200"></div>
+        <span class="text-xs text-slate-400">OR</span>
+        <div class="h-px flex-1 bg-slate-200"></div>
+      </div>
+
+      <!-- Google -->
+      <button
+        type="button"
+        class="flex w-full items-center justify-center gap-3
+               rounded-lg border border-slate-200 py-3
+               text-sm font-medium text-slate-700
+               hover:bg-slate-50"
+      >
+        <img
+          src="https://www.svgrepo.com/show/475656/google-color.svg"
+          class="h-5 w-5"
+        />
+        Sign in with Google
+      </button>
+
+      <!-- Footer -->
+      <p class="mt-6 text-center text-sm text-slate-500">
+        Don’t have an account?
+        <span class="font-medium text-purple-600 cursor-pointer">
+          <a href="/auth/register"
+          >Sign Up</a>
+        </span>
+      </p>
+    </form>
+  </div>
+
+  <!-- RIGHT: ILLUSTRATION -->
+  <div class="relative hidden lg:flex items-center justify-center bg-purple-500" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80');">
+    <!-- <img
+    style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80');"
+      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+      alt="Login Illustration"
+      class="w-[75%]"
+    /> -->
+  </div>
+
 </div>

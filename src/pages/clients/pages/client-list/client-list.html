@@ -1,0 +1,39 @@
+<div class="page">
+  <div class="page-header">
+    <div>
+      <h1>Clients</h1>
+      <!-- <p class="breadcrumb">Home / Clients</p> -->
+    </div>
+
+    <button class="primary-btn" routerLink="/clients/add">
+      + Add Client
+    </button>
+  </div>
+
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Client Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Employees</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- placeholder row -->
+        <tr>
+          <td>ABC Pvt Ltd</td>
+          <td>abc@gmail.com</td>
+          <td>9876543210</td>
+          <td>12</td>
+          <td>
+            <a routerLink="/clients/edit/1">Edit</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

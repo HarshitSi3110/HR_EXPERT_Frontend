@@ -1,0 +1,25 @@
+.content {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: calc(100vh - 64px);
+}
+
+.content {
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+
+  background:
+#D4AA98
+    ,
+    radial-gradient(
+      circle at bottom right,
+      rgba(14, 165, 233, 0.08),
+      transparent 40%
+    ),
+    #f8fafc;
+}
+
+
+ body { font-family: 'Inter', sans-serif; }
+
+

@@ -1,0 +1,85 @@
+<div class="page-container">
+
+  <!-- HERO -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <div>
+        <h1>Client Management</h1>
+        <p>
+          Manage all your clients, company details, and communication
+          from one central place.
+        </p>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <h2>{{clients.length}}</h2>
+          <span>Total Clients</span>
+        </div>
+        <div class="stat">
+          <h2>{{clients.length}}</h2>
+          <span>Active</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <div>
+      <h1>Clients</h1>
+      <p class="breadcrumb">Home / Clients</p>
+    </div>
+
+    <button
+      class="btn primary"
+      routerLink="/clients/add-client">
+      + Add Client
+    </button>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-card">
+    <table class="modern-table">
+      <thead>
+        <tr>
+          <th style="font: bold;">Sr.</th>
+          <th style="font: bold;">Client</th>
+          <th style="font: bold;">Company</th>
+          <th style="font: bold;">Phone</th>
+          <th style="font: bold;">Status</th>
+          <th style="font: bold;" class="right">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let client of clients; index as i">
+          <td>{{ i + 1 }}</td>
+
+          <td class="user-cell">
+            <div class="avatar">
+              {{ client.clientName[0] }}
+            </div>
+            <span>{{ client.clientName }}</span>
+          </td>
+
+          <td>{{ client.companyCategory }}</td>
+          <td>{{ client.phone }}</td>
+
+          <td>
+            <span class="badge active">Active</span>
+          </td>
+
+          <td class="right">
+            <button
+              class="edit-btn"
+              [routerLink]="['/clients/edit-client', client._id]">
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

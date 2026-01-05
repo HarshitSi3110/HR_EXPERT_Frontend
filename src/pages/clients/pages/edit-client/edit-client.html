@@ -1,0 +1,80 @@
+<div class="page-container">
+
+<!-- HERO SECTION -->
+<div class="client-hero">
+  <div class="hero-content">
+    <h1>Edit Client</h1>
+    <p>
+      Update client details to keep records accurate for payroll,
+      compliance, and HR operations.
+    </p>
+  </div>
+</div>
+
+
+  <!-- Card -->
+  <div class="card">
+
+    <form *ngIf="!loading" (ngSubmit)="submit()">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Client Name</label>
+          <input name="clientName" [(ngModel)]="formData.clientName" />
+        </div>
+
+        <div class="form-group">
+          <label>Client ID</label>
+          <input name="clientId" [(ngModel)]="formData.clientId" />
+        </div>
+
+        <div class="form-group">
+          <label>Company Category</label>
+          <select name="companyCategory" [(ngModel)]="formData.companyCategory">
+            <option>Private</option>
+            <option>Government</option>
+            <option>Startup</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Phone</label>
+          <input name="phone" [(ngModel)]="formData.phone" />
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input name="email" [(ngModel)]="formData.email" />
+        </div>
+
+        <div class="form-group full">
+          <label>Address</label>
+          <input name="address" [(ngModel)]="formData.address" />
+        </div>
+
+        <div class="form-group full">
+          <label>Remarks</label>
+          <textarea
+            name="remarks"
+            rows="4"
+            [(ngModel)]="formData.remarks">
+          </textarea>
+        </div>
+
+      </div>
+
+      <!-- Actions -->
+      <div class="form-actions">
+        <button type="button" class="btn secondary" routerLink="/clients">
+          Cancel
+        </button>
+        <button type="submit" class="btn primary">
+          Update Client
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

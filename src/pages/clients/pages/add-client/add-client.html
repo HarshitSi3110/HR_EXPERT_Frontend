@@ -1,0 +1,133 @@
+<div class="add-client-page">
+<!-- HERO SECTION -->
+<div class="client-hero">
+  <div class="hero-content">
+    <h1>Add New Client</h1>
+    <p>
+      Create and manage client profiles to streamline HR operations,
+      payroll, and compliance — all in one place.
+    </p>
+  </div>
+</div>
+
+
+
+  <!-- FORM CARD -->
+  <form *ngIf="!submitted" class="client-form" (ngSubmit)="submit()">
+
+    <!-- FORM TITLE -->
+    <!-- <div class="form-header">
+      <h2>Client Details</h2>
+      <p>Please fill in the information below</p>
+    </div> -->
+
+    <!-- FORM GRID -->
+<div class="form-grid">
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.clientName" name="clientName" required />
+    <label>Client Name</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.clientId" name="clientId" />
+    <label>Client ID</label>
+  </div>
+
+  <div class="form-field">
+    <select [(ngModel)]="formData.companyCategory" name="companyCategory">
+      <option value="" disabled selected hidden></option>
+      <option>Private</option>
+      <option>Government</option>
+      <option>Startup</option>
+    </select>
+    <label>Company Category</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.phone" name="phone" />
+    <label>Phone</label>
+  </div>
+
+  <div class="form-field">
+    <input type="email" [(ngModel)]="formData.email" name="email" />
+    <label>Email</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.country" name="country" />
+    <label>Country</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.state" name="state" />
+    <label>State</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.district" name="district" />
+    <label>District</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.pincode" name="pincode" />
+    <label>Pincode</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.gstNumber" name="gstNumber" />
+    <label>GST Number</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.companyAccountNumber" name="companyAccountNumber" />
+    <label>Company Account Number</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.ifscCode" name="ifscCode" />
+    <label>IFSC Code</label>
+  </div>
+
+  <div class="form-field">
+    <input type="text" [(ngModel)]="formData.branch" name="branch" />
+    <label>Branch</label>
+  </div>
+
+  <div class="form-field full">
+    <input type="text" [(ngModel)]="formData.address" name="address" />
+    <label>Address</label>
+  </div>
+
+  <div class="form-field full textarea">
+    <textarea rows="4" [(ngModel)]="formData.remarks" name="remarks"></textarea>
+    <label>Briefly explain what you may need assistance with</label>
+  </div>
+
+</div>
+
+
+    <!-- ACTIONS -->
+    <div class="actions">
+      <button type="submit" class="primary-btn">Add Client</button>
+    </div>
+
+  </form>
+
+  <!-- CONFIRMATION (unchanged) -->
+  <div *ngIf="submitted" class="confirmation">
+    <div class="check">✔</div>
+    <h2>Client Added Successfully</h2>
+    <p>The client has been saved and is now available in client list.</p>
+
+    <div class="actions">
+      <button class="secondary-btn" routerLink="/clients">
+        Back to Clients
+      </button>
+      <button class="primary-btn" (click)="reset()">
+        Add Another Client
+      </button>
+    </div>
+  </div>
+
+</div>

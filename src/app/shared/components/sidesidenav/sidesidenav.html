@@ -1,0 +1,30 @@
+<nav class="sidenav" [class.collapsed]="collapsed">
+
+  <!-- Collapse Button -->
+  <button class="collapse-btn" (click)="collapse.emit()">
+    ☰
+  </button>
+
+  <ul>
+    <li routerLink="/dashboard">
+      <span class="icon">🏠</span>
+      <span class="text" *ngIf="!collapsed">Dashboard</span>
+    </li>
+
+    <li routerLink="/employees">
+      <span class="icon">👥</span>
+      <span class="text" *ngIf="!collapsed">Employees</span>
+    </li>
+
+    <li routerLink="/attendance">
+      <span class="icon">🕒</span>
+      <span class="text" *ngIf="!collapsed">Attendance</span>
+    </li>
+
+    <li routerLink="/salary">
+      <span class="icon">₹</span>
+      <span class="text" *ngIf="!collapsed">Salary</span>
+    </li>
+  </ul>
+
+</nav>

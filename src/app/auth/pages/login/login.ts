@@ -26,21 +26,23 @@ export class Login {
     });
   }
 
-  submit() {
-    if (this.form.invalid) return;
+submit() {
+  if (this.form.invalid) return;
 
-    this.loading = true;
-    this.error = '';
+  this.loading = true;
+  this.error = '';
 
-    this.auth.login(this.form.value as any).subscribe({
-      next: (res: any) => {
-        this.auth.saveToken(res.token);
-        this.router.navigate(['/']); // dashboard later
-      },
-      error: (err) => {
-        this.error = err.error?.message || 'Login failed';
-        this.loading = false;
-      },
-    });
-  }
+  this.auth.login(this.form.value as any).subscribe({
+    next: (res) => {
+      this.auth.saveAuth(res.token, res.user);
+      this.router.navigate(['/dashboard']);
+    },
+    error: (err) => {
+      this.error = err.error?.message || 'Login failed';
+      this.loading = false;
+    },
+  });
+}
+
+
 }

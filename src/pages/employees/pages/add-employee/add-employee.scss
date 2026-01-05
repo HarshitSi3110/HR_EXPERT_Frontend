@@ -1,0 +1,302 @@
+.employee-page {
+  padding: 32px;
+  background: #f8fafc;
+}
+
+.hero {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  p {
+    margin-top: 6px;
+    opacity: 0.9;
+  }
+}
+
+.card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.06);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 6px;
+  }
+
+  input, select {
+    padding: 11px 12px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    font-size: 14px;
+
+    &:focus {
+      outline: none;
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99,102,241,.15);
+    }
+  }
+}
+
+.full {
+  grid-column: span 3;
+}
+
+.radio-group {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.actions {
+  margin-top: 28px;
+}
+
+.primary-btn {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.secondary-btn {
+  background: #f1f5f9;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+}
+
+.confirmation {
+  background: #fff;
+  padding: 48px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,.06);
+
+  .check {
+    font-size: 44px;
+    color: #22c55e;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .full {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .full {
+    grid-column: span 1;
+  }
+}
+/* GLOBAL FONT */
+.employee-page {
+  font-family: 'Inter', sans-serif;
+  background: #f8fafc;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+/* HERO – calm enterprise look */
+.hero {
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  padding: 32px 36px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.hero h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.05),
+    0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* GRID */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* FORM GROUP */
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+/* INPUTS & SELECTS */
+.form-group input,
+.form-group select {
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #0f172a;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #cbd5f5;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* FULL WIDTH */
+.full {
+  grid-column: span 3;
+}
+
+/* RADIO GROUP */
+.radio-group {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.radio-group input {
+  accent-color: #2563eb;
+}
+
+/* ACTIONS */
+.actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 14px;
+}
+
+/* BUTTONS */
+.primary-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: #f1f5f9;
+}
+
+/* CONFIRMATION */
+.confirmation {
+  background: #ffffff;
+  padding: 48px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.confirmation .check {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .full {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .full {
+    grid-column: span 1;
+  }
+}

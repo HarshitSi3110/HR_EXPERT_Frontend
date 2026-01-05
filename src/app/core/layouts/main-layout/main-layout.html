@@ -1,0 +1,177 @@
+<div class="flex h-screen bg-slate-50">
+
+<aside
+  class="bg-white border-r border-slate-200
+         transition-all duration-300
+         flex flex-col h-screen"
+  [class.w-56]="!isSidebarCollapsed"
+  [class.w-16]="isSidebarCollapsed"
+>
+
+  <!-- ===== LOGO / TITLE ===== -->
+  <div
+    class="h-14 flex items-center gap-3 px-4
+           border-b border-slate-200
+           font-semibold text-slate-800">
+
+    <div
+      class="w-9 h-9 rounded-lg
+             bg-blue-600 text-white
+             flex items-center justify-center text-sm">
+      ₹
+    </div>
+
+    <span *ngIf="!isSidebarCollapsed" class="whitespace-nowrap">
+      Salary Management
+    </span>
+  </div>
+
+  <!-- ===== MENU ===== -->
+  <nav class="flex-1 overflow-y-auto px-2 py-3 space-y-1 text-sm">
+
+    <!-- Dashboard -->
+    <a
+      routerLink="/dashboard"
+      routerLinkActive="bg-blue-50 text-blue-600 font-medium"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="group flex items-center gap-3 px-3 py-2 rounded-lg
+             hover:bg-slate-100 transition">
+
+      <img
+        src="https://api.iconify.design/heroicons/home.svg"
+        class="w-5 h-5 opacity-70 group-hover:opacity-100"
+      />
+
+      <span *ngIf="!isSidebarCollapsed">Dashboard</span>
+    </a>
+
+    <!-- Clients -->
+    <a
+      routerLink="/clients"
+      routerLinkActive="bg-blue-50 text-blue-600 font-medium"
+      class="group flex items-center gap-3 px-3 py-2 rounded-lg
+             hover:bg-slate-100 transition">
+
+      <img
+        src="https://api.iconify.design/heroicons/users.svg"
+        class="w-5 h-5 opacity-70 group-hover:opacity-100"
+      />
+
+      <span *ngIf="!isSidebarCollapsed">Client Management</span>
+    </a>
+
+    <!-- Employees -->
+    <a
+      routerLink="/employees"
+      routerLinkActive="bg-blue-50 text-blue-600 font-medium"
+      class="group flex items-center gap-3 px-3 py-2 rounded-lg
+             hover:bg-slate-100 transition">
+
+      <img
+        src="https://api.iconify.design/heroicons/user-group.svg"
+        class="w-5 h-5 opacity-70 group-hover:opacity-100"
+      />
+
+      <span *ngIf="!isSidebarCollapsed">Employee Management</span>
+    </a>
+
+    <!-- Attendance -->
+    <a
+      routerLink="/attendance"
+      routerLinkActive="bg-blue-50 text-blue-600 font-medium"
+      class="group flex items-center gap-3 px-3 py-2 rounded-lg
+             hover:bg-slate-100 transition">
+
+      <img
+        src="https://api.iconify.design/heroicons/clock.svg"
+        class="w-5 h-5 opacity-70 group-hover:opacity-100"
+      />
+
+      <span *ngIf="!isSidebarCollapsed">Attendance</span>
+    </a>
+
+    <!-- Salary -->
+    <a
+      routerLink="/salary"
+      routerLinkActive="bg-blue-50 text-blue-600 font-medium"
+      class="group flex items-center gap-3 px-3 py-2 rounded-lg
+             hover:bg-slate-100 transition">
+
+      <img
+        src="https://api.iconify.design/heroicons/currency-rupee.svg"
+        class="w-5 h-5 opacity-70 group-hover:opacity-100"
+      />
+
+      <span *ngIf="!isSidebarCollapsed">Salary Management</span>
+    </a>
+
+  </nav>
+
+  <!-- ===== COLLAPSE BUTTON ===== -->
+  <button
+    (click)="toggleSidebar()"
+    class="flex items-center gap-2 px-4 py-3
+           border-t text-sm text-slate-600
+           hover:bg-slate-100">
+
+    ◀
+    <span *ngIf="!isSidebarCollapsed">Collapse</span>
+  </button>
+
+</aside>
+
+
+
+
+
+  <!-- ================= MAIN ================= -->
+<main class="flex-1 flex flex-col h-screen overflow-hidden">
+
+  <!-- HEADER (fixed height) -->
+  <app-header class="shrink-0"></app-header>
+
+  <!-- PAGE CONTENT (scrollable) -->
+  <section class="flex-1 overflow-y-auto bg-slate-50">
+    <router-outlet></router-outlet>
+  </section>
+
+  <!-- FOOTER (fixed height) -->
+  <app-footer class="shrink-0"></app-footer>
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

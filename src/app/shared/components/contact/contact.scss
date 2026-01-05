@@ -1,0 +1,94 @@
+/* HERO */
+.about-hero {
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 72px 20px;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 16px;
+  color: #64748b;
+  max-width: 640px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* CONTENT */
+.about-content {
+  max-width: 900px;
+  margin: 64px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 28px;
+}
+
+/* CARDS */
+.about-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.05),
+    0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.about-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* HIGHLIGHT */
+.about-highlight {
+  background: #f8fafc;
+  border: 1px dashed #c7d2fe;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+}
+
+.about-highlight p {
+  font-size: 14px;
+  color: #475569;
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .about-hero h1 {
+    font-size: 28px;
+  }
+
+  .about-content {
+    margin: 48px auto;
+  }
+
+  .about-card {
+    padding: 24px;
+  }
+}
+
+
+.note {
+  margin-top: 12px;
+  color: #64748b;
+}
